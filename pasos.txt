@@ -1,0 +1,13 @@
+1-tomar datos de form ✔
+2-formar los array de notas con los datos ✔
+3-formar rows de la table con los datos ✔ 
+4-insertar esos rows ✔
+5-crear id para cada array de notas ✔
+6-crear modal con datos de cada note ✔
+7-crear modal para modificar notas ✔
+8-Llamar al modal con cada boton en cada nota ✔
+9-guardar los datos nuevos del modal de edit ✔
+10-guardar los datos nuevos en la nota seleccionada para modificar ✔
+11-crear boton de eliminar nota para cada nota ✔
+12-el boton tiene que eliminar los datos del local de la nota misma y llamar la funcion de mostrar la table denuevo ✔
+13-seguir creando el pathing del proyecto para el search, crear categorias nuevas y mas ideas ╰(*°▽°*)╯
