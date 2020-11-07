@@ -25,3 +25,8 @@ Al eliminar una categoría debe verificarse que no exista una nota con dicha cat
 Se debe poder listar todas las notas de una categoría seleccionada.
 
 Fecha de presentación: 10/11/2020
+
+
+
+
+https://mateomax-hub.github.io/MyNotes/.

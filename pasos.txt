@@ -10,4 +10,8 @@
 10-guardar los datos nuevos en la nota seleccionada para modificar ✔
 11-crear boton de eliminar nota para cada nota ✔
 12-el boton tiene que eliminar los datos del local de la nota misma y llamar la funcion de mostrar la table denuevo ✔
-13-seguir creando el pathing del proyecto para el search, crear categorias nuevas y mas ideas ╰(*°▽°*)╯
+13-seguir creando el pathing del proyecto para el search, crear categorias nuevas y mas ideas ╰(*°▽°*)╯ (inwork)
+
+
+14- crear las funciones aparte para traer o setear los objetos/notas
+15- ver como era para dividir la funcion de displaynotes en 2 partes

@@ -14,7 +14,7 @@ const generateId = function () {
 
 addNoteForm.onsubmit = (e) => {
     e.preventDefault();
-    const usersNotes = JSON.parse(localStorage.getItem('usersNotes')) || [];
+    const usersNotes = getNotes()
 
     const noteName = addNoteName.value;
     const noteSelect = addNoteSelect.value;
@@ -26,7 +26,8 @@ addNoteForm.onsubmit = (e) => {
         noteName,
         noteSelect,
         noteTextarea,
-        id: generateId()
+        id: generateId(),
+        createdAt: Date.now()
     })
 
     const usersNotesJson = JSON.stringify(usersNotes);
@@ -36,8 +37,8 @@ addNoteForm.onsubmit = (e) => {
     createInfoModals()
 }
 
-function displayNotes() {
-    const usersNotes = JSON.parse(localStorage.getItem('usersNotes')) || [];
+function displayNotes(usersNotes) {
+
     const row = []
     for (let i = 0; i < usersNotes.length; i++) {
         const usernote = usersNotes[i];
@@ -64,6 +65,11 @@ function displayNotes() {
     notesTable.innerHTML = row.join('')
 }
 
+function displayAllNotes() {
+    const usersNotes = getNotes()
+    displayNotes(usersNotes)
+}
+
 
 function createInfoModals() {
     const usersNotes = JSON.parse(localStorage.getItem('usersNotes')) || [];
@@ -71,6 +77,7 @@ function createInfoModals() {
     for (let i = 0; i < usersNotes.length; i++) {
         const userNote = usersNotes[i];
 
+        const createdAt = new Date(userNote.createdAt)
 
         const modal = `
         <!-- Modal${userNote.id} -->
@@ -87,6 +94,8 @@ function createInfoModals() {
                         <h5>${userNote.noteSelect}</h5>
                         <hr>
                         <p>${userNote.noteTextarea}</p>
+                        <hr>
+                        <h6>Fecha de creacion:${createdAt.toLocaleString()}</h6>
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -105,5 +114,5 @@ function createInfoModals() {
 
 
 createInfoModals()
-displayNotes()
+displayAllNotes()
 
