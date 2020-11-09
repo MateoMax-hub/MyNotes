@@ -49,7 +49,7 @@ editNoteForm.onsubmit = (e) => {
     localStorage.setItem('usersNotes',editedNote)
     $('#editNoteModal').modal('hide')
     createInfoModals()
-    displayNotes()
+    displayAllNotes()
 }
 
 function deleteUser(noteId) {
@@ -59,5 +59,5 @@ function deleteUser(noteId) {
     const noteThatStay = JSON.stringify(deletingNote)
     localStorage.setItem('usersNotes',noteThatStay)
     createInfoModals()
-    displayNotes()
+    displayAllNotes()
 }

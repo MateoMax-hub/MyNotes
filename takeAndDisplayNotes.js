@@ -33,7 +33,7 @@ addNoteForm.onsubmit = (e) => {
     const usersNotesJson = JSON.stringify(usersNotes);
     localStorage.setItem('usersNotes',usersNotesJson);
     $('#addNoteModal').modal('hide')
-    displayNotes()
+    displayAllNotes()
     createInfoModals()
 }
 
