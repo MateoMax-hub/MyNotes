@@ -10,6 +10,7 @@ addNoteSelect.onchange = () => {
         $('#addOptionModal').modal('show')
     }
     if (selectValue === "ELIMINAR CATEGORIA") {
+        addNoteSelect.value = 'categoria'
         deleteCategorie()
     }
 

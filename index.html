@@ -168,6 +168,39 @@
     </div>
 </div>
 
+<!-- eliminar categoria modal -->
+<div class="modal fade" id="deleteOptionModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content bg-dark text-white">
+            <div class="modal-header">
+                <h4 class="modal-title" id="exampleModalLabel">Eliminar categoria(┬┬﹏┬┬)</h4>
+                <button type="button" class="close text-white" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <form id="deleteOptionForm" action="/action_page.php">
+                <div class="modal-body">
+                    <div class="form-group">
+                        <h5>Nombre de las categoria</h5>
+                        <div id="deleteOptions">
+                            <button></button>
+                            <input type="radio" name="browser" onclick="myFunction(this.value)" value="Internet Explorer">Internet Explorer
+                            <input type="radio" name="browser" onclick="myFunction(this.value)" value="Firefox">Firefox
+                            <input type="radio" name="browser" onclick="myFunction(this.value)" value="Opera">Opera
+                            <input type="radio" name="browser" onclick="myFunction(this.value)" value="Google Chrome">Google Chrome
+                            <input type="radio" name="browser" onclick="myFunction(this.value)" value="Safari">Safari
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-warning" data-dismiss="modal">Cancelar</button>
+                    <button type="submit" class="btn btn-outline-success">Eliminar categoria</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
 
 
 
@@ -183,6 +216,7 @@
     <script src="./editNotes.js"></script>
     <script src="./search.js"></script>
     <script src="./addCategories.js"></script>
+    <script src="./deleteCategorie.js"></script>
 </body>
 
 </html>
