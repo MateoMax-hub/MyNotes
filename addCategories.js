@@ -2,7 +2,18 @@ const addOption = document.getElementById('addOption')
 const addOptionForm = document.getElementById('addOptionForm')
 const addOptionInput = document.getElementById('newOptionName')
 
+editNoteSelect.onchange = () => {
+    const selectValue = editNoteSelect.value
+    if (selectValue === "CREAR CATEGORIA") {
+        editNoteSelect.value = 'categoria'
+        $('#addOptionModal').modal('show')
+    }
+    if (selectValue === "ELIMINAR CATEGORIA") {
+        editNoteSelect.value = 'categoria'
+        $('#deleteOptionModal').modal('show')
+    }
 
+}
 addNoteSelect.onchange = () => {
     const selectValue = addNoteSelect.value
     if (selectValue === "CREAR CATEGORIA") {
@@ -11,7 +22,7 @@ addNoteSelect.onchange = () => {
     }
     if (selectValue === "ELIMINAR CATEGORIA") {
         addNoteSelect.value = 'categoria'
-        deleteCategorie()
+        $('#deleteOptionModal').modal('show')
     }
 
 }
@@ -37,6 +48,7 @@ function displayCategories() {
     `
     options.push(addOrDeleteCategorie)
     addNoteSelect.innerHTML = options.join('')
+    editNoteSelect.innerHTML = options.join('')
 }
 
 

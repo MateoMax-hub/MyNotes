@@ -13,7 +13,5 @@ searchInput.oninput = () => {
         ))
         displayNotes(filteredNotes)
     }, 1500)
-
-
 }
 
