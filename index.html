@@ -25,12 +25,21 @@
 
     <section id="searchSect">
         <div class="container">
-            <form id="searchForm" class="searchingForm">
+            <form id="searchForm" class="searchingForm d-flex flex-column">
                 <h2>Encuentra tus notas!</h2>
-                <input type="search" placeholder="criterio de busqueda" id="searchInput">
-                <select id="categoriesFilter">
-                </select>
-                <button class="btn btn-warning" onclick="limpiarFiltros()" type="button">Limpiar filtros</button>
+                <div class="d-flex">
+                    <div class="form-group d-flex flex-column mr-5">
+                        <h6>Nombre o contenido de nota</h6>
+                        <input type="search" placeholder="criterio de busqueda" id="searchInput">
+                    </div>
+                    <div class="form-group d-flex flex-column ml-4 ">
+                        <h6>filtrar por categoria</h6>
+                        <select id="categoriesFilter">
+                        </select>
+                    </div>
+                </div>
+
+                <button class="btn btn-warning m-h-aa" onclick="limpiarFiltros()" type="button">Limpiar filtros</button>
             </form>
         </div>
     </section>
@@ -86,6 +95,7 @@
                                 <input type="text" id="addNoteName" required maxlength="60">
                             </div>
                             <div class=" form-group">
+                                <label for="">Categoria</label>
                                 <select id="addNoteSelect" required>
                                 </select>
                             </div>
@@ -118,6 +128,7 @@
                                 <input type="text" id="editNoteName" required maxlength="60">
                             </div>
                             <div class=" form-group">
+                                <label for="">Categoria</label>
                                 <select id="editNoteSelect" required>
                                 </select>
                             </div>
@@ -145,7 +156,7 @@
                         <div class="modal-body">
                             <div class="form-group">
                                 <h5>Nombre de la categoria</h5>
-                                <input type="text" required id="newOptionName" class="bg-dark text-white my-border-white">
+                                <input class="bg-dark text-white my-border-white" required id="newOptionName" type="text">
                             </div>
                         </div>
                         <div class="modal-footer">
@@ -172,7 +183,7 @@
                         </form>
                     </div>
                     <div class=" modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                        <button type="button" class="btn btn-secondary" onclick="deleteCategorieModalClose()">Cerrar</button>
                         <button class="btn btn-outline-danger" onclick="deleteCategorieButton()">Eliminar categoria</button>
                     </div>
                         

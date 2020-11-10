@@ -11,6 +11,7 @@ selectElement.addEventListener('input', (event) => {
     // resultado.textContent = `Te gusta el sabor ${event.target.value}`;
     if (categoriesFilterr.value !== 'categoria' && searchInput.value !== '' && categoriesFilterr.value !== 'CREAR CATEGORIA' && categoriesFilterr.value !== 'ELIMINAR CATEGORIA'|| categoriesFilterr.value !== '' && searchInput.value !== '' && categoriesFilterr.value !== 'CREAR CATEGORIA' && categoriesFilterr.value !== 'ELIMINAR CATEGORIA') {
             const usersNotes = getNotes()
+            console.log('if')
             const term = searchInput.value;
             const termC = categoriesFilterr.value
             const filteredNotes = usersNotes.filter(n => (
@@ -30,13 +31,18 @@ selectElement.addEventListener('input', (event) => {
             ))
             displayNotes(filteredNotes)
         
-    }else if(categoriesFilterr.value !== 'categoria' && categoriesFilterr.value !== 'CREAR CATEGORIA' && categoriesFilterr.value !== 'ELIMINAR CATEGORIA'|| categoriesFilterr.value !== '' && categoriesFilterr.value !== 'CREAR CATEGORIA' && categoriesFilterr.value !== 'ELIMINAR CATEGORIA'){
+    }else if(categoriesFilterr.value !== 'categoria' && categoriesFilterr.value !== 'CREAR CATEGORIA' && categoriesFilterr.value !== 'ELIMINAR CATEGORIA' && searchInput.value !== '' || categoriesFilterr.value !== '' && categoriesFilterr.value !== 'CREAR CATEGORIA' && categoriesFilterr.value !== 'ELIMINAR CATEGORIA' && searchInput.value !== '' || categoriesFilterr.value !== '' && categoriesFilterr.value !== 'CREAR CATEGORIA' && categoriesFilterr.value !== 'ELIMINAR CATEGORIA' && searchInput.value == '' ){
         console.log('hifelse')
     
         const notes = getNotes()
         const termC = categoriesFilterr.value
         const filteredNotesC = notes.filter((n) => (n.noteSelect == termC))
         displayNotes(filteredNotesC)
+    }else if (searchInput.value == '' ) {
+        console.log('hifelseelse')
+        
+        displayAllNotes()
+    
     }
 
 });

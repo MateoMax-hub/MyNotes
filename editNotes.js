@@ -16,6 +16,8 @@ function displayEditModal(noteId) {
     var noteSelect = editNotes[0].noteSelect
     var noteTextarea = editNotes[0].noteTextarea
 
+    modalSelectVal = noteSelect
+
     editNoteName.value = noteName
     editNoteSelect.value = noteSelect
     editNoteTextarea.value = noteTextarea

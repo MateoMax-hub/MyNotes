@@ -15,14 +15,33 @@ function deleteCategorieButton() {
     buttonValidation = true
     myFunction(dataOfWeirdSelect)
     buttonValidation = false
-    
+
+    const usernotes = getNotes()
+
     const userCategories = JSON.parse(localStorage.getItem('userCategories')) || []
     const deletingCategorie = userCategories.filter((c) => finalDataOfSelect !== c.categoriaNombre)
 
-    const categoriesJSON = JSON.stringify(deletingCategorie)
-    localStorage.setItem('userCategories',categoriesJSON)
-    $('#deleteOptionModal').modal('hide')
-    displayCategories()
+    const deleteCategorieVal = usernotes.find((c) => c.noteSelect == finalDataOfSelect)
+    if (deleteCategorieVal == undefined) {
+        const categoriesJSON = JSON.stringify(deletingCategorie)
+        localStorage.setItem('userCategories',categoriesJSON)
+        $('#deleteOptionModal').modal('hide')
+        displayCategories()
+    } else {
+        alert('no se pudo eliminar la categoria porque una nota la esta usando')
+    }
+
+    // for (let i = 0; i < usernotes.length; i++) {
+    //     const note = usernotes[i];
+    //     if (note.noteSelect === finalDataOfSelect) {
+    //         alert('nope')
+    //     } else {
+    //         const categoriesJSON = JSON.stringify(deletingCategorie)
+    //         localStorage.setItem('userCategories',categoriesJSON)
+    //         $('#deleteOptionModal').modal('hide')
+    //         displayCategories()
+    //     }
+    // }
 }
 
 

@@ -4,7 +4,7 @@ const addNoteSelect = document.getElementById('addNoteSelect');
 const addNoteTextarea = document.getElementById('addNoteTextarea');
 const notesTable = document.getElementById('notesTable')
 const infoModals = document.getElementById('infoModals')
-
+let modalSelectVal = ''
 
 
 
@@ -91,7 +91,7 @@ function createInfoModals() {
                         </button>
                     </div>
                     <div class="modal-body">
-                        <h5>${userNote.noteSelect}</h5>
+                        <h6>${userNote.noteSelect}</h6>
                         <hr>
                         <p>${userNote.noteTextarea}</p>
                         <hr>
