@@ -11,6 +11,7 @@ editNoteSelect.onchange = () => {
     if (selectValue === "ELIMINAR CATEGORIA") {
         editNoteSelect.value = 'categoria'
         $('#deleteOptionModal').modal('show')
+        displayCategoriesInDelete()
     }
 
 }
@@ -23,6 +24,7 @@ addNoteSelect.onchange = () => {
     if (selectValue === "ELIMINAR CATEGORIA") {
         addNoteSelect.value = 'categoria'
         $('#deleteOptionModal').modal('show')
+        displayCategoriesInDelete()
     }
 
 }

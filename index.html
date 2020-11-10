@@ -64,138 +64,113 @@
     </section>
 
 
-<section id="infoModals">
+    <section id="infoModals">
 
-</section>
-
-
+    </section>
 
 
-<!-- Modal/Add notes form-->
-<div class="modal fade" id="addNoteModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Crear nota╰(*°▽°*)╯</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <form id="addNoteForm">
-                <div class="modal-body">
-                    <div class=" form-group">
-                        <label >Nombre de la nota</label>
-                        <input type="text" id="addNoteName" required maxlength="60">
+
+    <section id="modals">
+
+        <!-- Modal add notes form-->
+        <div class="modal fade" id="addNoteModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Crear nota╰(*°▽°*)╯</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
                     </div>
-                    <div class=" form-group">
-                        <select id="addNoteSelect" required>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <textarea id="addNoteTextarea" cols="57,5" rows="10" required maxlength="500"></textarea>
-                    </div>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
-                    <button type="submit" class="btn btn-outline-success">Crear nota</button>
-                </div>
-            </form>
-        </div>
-    </div>
-</div>
-
-
-<!-- Modal edite notes form-->
-<div class="modal fade" id="editNoteModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Editar nota╰(*°▽°*)╯</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <form id="editNoteForm">
-                <div class="modal-body">
-                    <div class=" form-group">
-                        <label >Nombre de la nota</label>
-                        <input type="text" id="editNoteName" required maxlength="60">
-                    </div>
-                    <div class=" form-group">
-                        <select id="editNoteSelect" required>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <textarea id="editNoteTextarea" cols="57,5" rows="10" required maxlength="500"></textarea>
-                    </div>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
-                    <button type="submit" class="btn btn-outline-success">Guardar cambios</button>
-                </div>
-            </form>
-        </div>
-    </div>
-</div>
-
-<!-- agregar categoria modal -->
-<div class="modal fade" id="addOptionModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content bg-dark text-white">
-            <div class="modal-header">
-                <h4 class="modal-title" id="exampleModalLabel">Crear categoria╰(*°▽°*)╯</h4>
-                <button type="button" class="close text-white" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <form id="addOptionForm">
-                <div class="modal-body">
-                    <div class="form-group">
-                        <h5>Nombre de la categoria</h5>
-                        <input type="text" required id="newOptionName" class="bg-dark text-white my-border-white">
-                    </div>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-warning" data-dismiss="modal">Cancelar</button>
-                    <button type="submit" class="btn btn-outline-success">Crear categoria</button>
-                </div>
-            </form>
-        </div>
-    </div>
-</div>
-
-<!-- eliminar categoria modal -->
-<div class="modal fade" id="" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" data-backdrop="static" data-keyboard="false">
-    <div class="modal-dialog modal-dialog-scrollable">
-        <div class="modal-content bg-dark text-white">
-            <div class="modal-header">
-                <h4 class="modal-title" id="exampleModalLabel">Eliminar categoria(┬┬﹏┬┬)</h4>
-                <button type="button" class="close text-white" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <form id="deleteOptionForm" action="/action_page.php">
-                <div class="modal-body">
-                    <div class="form-group">
-                        <h5>Nombre de las categoria</h5>
-                        <div id="deleteOptions">
-                            <p>Lorem ipsum dolor sit amet cLorem ipsum dolor sit amet consectetur adipisicing elit. Eiusminima     exercitationem laudantium suscipit aspernatur accusantium ea expedita, voluptatibusipsum hic? Quaerat,     doloremque omnis aspernatur ullam vero ipsa iusto odio rem?Lorem, ipsumdolor sit amet consectetur  adipisicing elit. Nisi voluptatum omnis quam recusandae magni ipsumperferendis animi ut, maiores at     amet tempore repudiandae, voluptate dolorum a! Autem repellatsaepe nemo?Lorem ipsum, dolor sit amet    consectetur adipisicing elit. Minus dignissimos eosobcaecati, ipsam nesciunt veniam modi, omnis   commodi officia, consequuntur non aperiam velitpossimus mollitia praesentium pariatur doloremque     officiis quis!Lorem Lorem ipsum dolor sitamet consectetur adipisicing elit. Obcaecati magni corrupti   enim distinctio dolores explicabofuga repellat omnis molestiae ad. Aperiam animi modi non commodi    itaque error facilis excepturirepudiandae. Lorem ipsum dolor, sit amet consectetur adipisicing elit.  Iure esse est doloribusiusto repellendus incidunt quam fugiat eum cupiditate pariatur laudantium fuga   quos voluptatemdeserunt saepe sit ullam, sequi ea! Lorem ipsum dolor sit amet consectetur adipisicing    elit.Consequuntur vero possimus hic repellat adipisci necessitatibus, eaque atque, ex vel excepturi  tempora delectus ipsa praesentium officia sint accusantium tenetur qui molestias. Lorem ipsum dolorsit   amet consectetur adipisicing elit. Dicta, unde sed optio esse inventore voluptates repellatplaceat   aliquid fugit assumenda quidem quo laudantium, cumque culpa dolorem id necessitatibusullam   non!onsectetur adipisicing elit. Eius minima exercitationem laudantium suscipit aspernaturaccusantium    ea expedita, voluptatibus ipsum hic? Quaerat, doloremque omnis aspernatur ullam veroipsa iusto odio   rem?Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nisi voluptatumomnis quam recusandae   magni ipsum perferendis animi ut, maiores at amet tempore repudiandae,voluptate dolorum a! Autem     repellat saepe nemo?Lorem ipsum, dolor sit amet consecteturadipisicing elit. Minus dignissimos eos     obcaecati, ipsam nesciunt veniam modi, omnis commodiofficia, consequuntur non aperiam velit possimus   mollitia praesentium pariatur doloremqueofficiis quis!Lorem Lorem ipsum dolor sit amet consectetur   adipisicing elit. Obcaecati magnicorrupti en</p>
+                    <form id="addNoteForm">
+                        <div class="modal-body">
+                            <div class=" form-group">
+                                <label >Nombre de la nota</label>
+                                <input type="text" id="addNoteName" required maxlength="60">
+                            </div>
+                            <div class=" form-group">
+                                <select id="addNoteSelect" required>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <textarea id="addNoteTextarea" cols="57,5" rows="10" required maxlength="500"></textarea>
+                            </div>
                         </div>
-                    </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                            <button type="submit" class="btn btn-outline-success">Crear nota</button>
+                        </div>
+                    </form>
                 </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-warning" data-dismiss="modal">Cancelar</button>
-                    <button type="submit" class="btn btn-outline-success">Eliminar categoria</button>
-                </div>
-            </form>
+            </div>
         </div>
-    </div>
-</div>
-        <!-- Modal terminos y condiciones -->
+
+
+        <!-- Modal edit notes form-->
+        <div class="modal fade" id="editNoteModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Editar nota╰(*°▽°*)╯</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <form id="editNoteForm">
+                        <div class="modal-body">
+                            <div class=" form-group">
+                                <label >Nombre de la nota</label>
+                                <input type="text" id="editNoteName" required maxlength="60">
+                            </div>
+                            <div class=" form-group">
+                                <select id="editNoteSelect" required>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <textarea id="editNoteTextarea" cols="57,5" rows="10" required maxlength="500"></textarea>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                            <button type="submit" class="btn btn-outline-success">Guardar cambios</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal add categories -->
+        <div class="modal fade" id="addOptionModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content bg-dark text-white">
+                    <div class="modal-header">
+                        <h4 class="modal-title" id="exampleModalLabel">Crear categoria╰(*°▽°*)╯</h4>
+                        <button type="button" class="close text-white" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <form id="addOptionForm">
+                        <div class="modal-body">
+                            <div class="form-group">
+                                <h5>Nombre de la categoria</h5>
+                                <input type="text" required id="newOptionName" class="bg-dark text-white my-border-white">
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-warning" data-dismiss="modal">Cancelar</button>
+                            <button type="submit" class="btn btn-outline-success">Crear categoria</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Modal delete categories -->
         <div class="modal fade" id="deleteOptionModal" data-backdrop="static" data-keyboard="false" tabindex="-1"
             aria-labelledby="staticBackdropLabel" aria-hidden="true">
             <div class="modal-dialog modal-dialog-scrollable">
-                <div class="modal-content">
+                <div class="modal-content  bg-dark text-white">
                     <div class="modal-header">
                         <h5 class="modal-title" id="staticBackdropLabel">Eliminar categoria (┬┬﹏┬┬)</h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
@@ -204,17 +179,17 @@
                     </div>
                     <div class="modal-body">
                         <form action="" id="deleteOptionForm">
-                            <input type="text">
                         </form>
                     </div>
                     <div class=" modal-footer">
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                        <button class="btn btn-outline-danger" onclick="deleteCategorieButton()">Eliminar categoria</button>
                     </div>
                         
                 </div>
             </div>
         </div>
-
+    </section>
 
 
     <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
