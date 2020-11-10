@@ -2,7 +2,9 @@ const searchForm = document.getElementById('searchForm')
 const searchInput = document.getElementById('searchInput')
 const categoriesFilterr = document.getElementById('categoriesFilter')
 
-
+searchForm.onsubmit = (e) => {
+    e.preventDefault()
+}
 
 const selectElement = document.querySelector('.searchingForm');
 
