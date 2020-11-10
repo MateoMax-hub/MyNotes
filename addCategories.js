@@ -2,14 +2,25 @@ const addOption = document.getElementById('addOption')
 const addOptionForm = document.getElementById('addOptionForm')
 const addOptionInput = document.getElementById('newOptionName')
 
-editNoteSelect.onchange = () => {
-    const selectValue = editNoteSelect.value
+
+categoriesFilterr.onchange = () => {
+    const selectValue = categoriesFilter.value
     if (selectValue === "CREAR CATEGORIA") {
-        editNoteSelect.value = 'categoria'
+        
         $('#addOptionModal').modal('show')
     }
     if (selectValue === "ELIMINAR CATEGORIA") {
-        editNoteSelect.value = 'categoria'
+        $('#deleteOptionModal').modal('show')
+        displayCategoriesInDelete()
+    }
+
+}
+editNoteSelect.onchange = () => {
+    const selectValue = editNoteSelect.value
+    if (selectValue === "CREAR CATEGORIA") {
+        $('#addOptionModal').modal('show')
+    }
+    if (selectValue === "ELIMINAR CATEGORIA") {
         $('#deleteOptionModal').modal('show')
         displayCategoriesInDelete()
     }
@@ -18,11 +29,9 @@ editNoteSelect.onchange = () => {
 addNoteSelect.onchange = () => {
     const selectValue = addNoteSelect.value
     if (selectValue === "CREAR CATEGORIA") {
-        addNoteSelect.value = 'categoria'
         $('#addOptionModal').modal('show')
     }
     if (selectValue === "ELIMINAR CATEGORIA") {
-        addNoteSelect.value = 'categoria'
         $('#deleteOptionModal').modal('show')
         displayCategoriesInDelete()
     }
@@ -51,6 +60,8 @@ function displayCategories() {
     options.push(addOrDeleteCategorie)
     addNoteSelect.innerHTML = options.join('')
     editNoteSelect.innerHTML = options.join('')
+    categoriesFilter.innerHTML = options.join('')
+    
 }
 
 
@@ -58,17 +69,31 @@ function displayCategories() {
 addOptionForm.onsubmit = (e) => {
     e.preventDefault()
     const optionName = addOptionInput.value
-    addOptionForm.reset()
     const userCategories = JSON.parse(localStorage.getItem('userCategories')) || []
-
+    
     userCategories.push ({
         categoriaNombre: optionName
     })
-
+    
     const userCategoriesJSON = JSON.stringify(userCategories)
     localStorage.setItem('userCategories',userCategoriesJSON)
     $('#addOptionModal').modal('hide')
     displayCategories()
+
+    if (addNoteSelect.value === '') {
+        addNoteSelect.value = optionName
+    }
+    
+
+    // if (categoriesFilterr.value === '') {
+    //     categoriesFilterr.value = optionName
+    // }
+    if (editNoteSelect.value === '') {
+        editNoteSelect.value = optionName
+    }
+    addOptionForm.reset()
+
 }
+
 
 displayCategories()

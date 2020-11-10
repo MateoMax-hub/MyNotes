@@ -25,12 +25,12 @@
 
     <section id="searchSect">
         <div class="container">
-            <form id="searchForm">
+            <form id="searchForm" class="searchingForm">
                 <h2>Encuentra tus notas!</h2>
                 <input type="search" placeholder="criterio de busqueda" id="searchInput">
-                <button type="submit">
-                    Buscar
-                </button>
+                <select id="categoriesFilter">
+                </select>
+                <button class="btn btn-warning" onclick="limpiarFiltros()" type="button">Limpiar filtros</button>
             </form>
         </div>
     </section>
@@ -51,7 +51,7 @@
             <tbody>
                 <tr>
                     <th scope="row">
-                        <button type="button" class="btn btn-outline-dark " data-toggle="modal" data-target="#addNoteModal">
+                        <button type="button" class="btn btn-outline-dark " onclick="openAddModal()">
                             +
                         </button>
                     </th>
@@ -78,9 +78,6 @@
                 <div class="modal-content">
                     <div class="modal-header">
                         <h5 class="modal-title" id="exampleModalLabel">Crear nota╰(*°▽°*)╯</h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
                     </div>
                     <form id="addNoteForm">
                         <div class="modal-body">
@@ -97,7 +94,7 @@
                             </div>
                         </div>
                         <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                            <button type="button" class="btn btn-secondary" onclick="closeAddNotesModal()">Cancelar</button>
                             <button type="submit" class="btn btn-outline-success">Crear nota</button>
                         </div>
                     </form>
@@ -112,9 +109,7 @@
                 <div class="modal-content">
                     <div class="modal-header">
                         <h5 class="modal-title" id="exampleModalLabel">Editar nota╰(*°▽°*)╯</h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
+
                     </div>
                     <form id="editNoteForm">
                         <div class="modal-body">
@@ -145,9 +140,6 @@
                 <div class="modal-content bg-dark text-white">
                     <div class="modal-header">
                         <h4 class="modal-title" id="exampleModalLabel">Crear categoria╰(*°▽°*)╯</h4>
-                        <button type="button" class="close text-white" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
                     </div>
                     <form id="addOptionForm">
                         <div class="modal-body">
@@ -157,7 +149,7 @@
                             </div>
                         </div>
                         <div class="modal-footer">
-                            <button type="button" class="btn btn-warning" data-dismiss="modal">Cancelar</button>
+                            <button type="button" class="btn btn-warning" onclick="closeAddCategorieModal()">Cancelar</button>
                             <button type="submit" class="btn btn-outline-success">Crear categoria</button>
                         </div>
                     </form>
@@ -173,9 +165,7 @@
                 <div class="modal-content  bg-dark text-white">
                     <div class="modal-header">
                         <h5 class="modal-title" id="staticBackdropLabel">Eliminar categoria (┬┬﹏┬┬)</h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
+
                     </div>
                     <div class="modal-body">
                         <form action="" id="deleteOptionForm">
@@ -205,6 +195,7 @@
     <script src="./search.js"></script>
     <script src="./addCategories.js"></script>
     <script src="./deleteCategorie.js"></script>
+    <script src="./closeOpenModals.js"></script>
 </body>
 
 </html>
